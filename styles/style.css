@@ -10,16 +10,16 @@ html {
 
 .page {
   display: flex;
-  font-weight: 400;
-  font-style: normal;
-  line-height: normal;
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
   font-size: 18px;
+  font-style: normal;
+  line-height: normal;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -44,8 +44,8 @@ ol {
 .content {
   display: flex;
   align-items: end;
-  margin: auto;
   gap: 30px;
+  margin: auto;
   max-inline-size: 1140px;
 }
 
@@ -57,39 +57,196 @@ ol {
   height: 100%;
 }
 
-.search-form {
-  display: flex;
-  gap: 9px;
-  justify-content: space-between;
+.content__list {
+  max-height: 298px;
+  overflow-y: auto;
+  position: relative;
 }
 
-.content__list {
-  overflow-y: auto;
-  max-height: 298px;
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 30px */
+  text-transform: uppercase;
+  margin-bottom: 6px;;
+}
+
+.content__video-card-thumbnail {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 194px;
+  block-size: 103px;
+}
+
+.content__video-card-description {
+  line-height: 16.2px;
+}
+
+.content__video-card-description-container {
+  width: 100%;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%; /* 70.5px */
+  text-transform: uppercase;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFF;;
+  cursor: pointer;
 }
 
 .result {
   display: flex;
-  min-width: 711px;
-  min-height: 456px;
-
   flex-direction: column;
   gap: 15px;
-}
-
-.result__video-container {
-
-  max-height: 386px;
-  width: 711px;
-  position: relative;
-
+  min-width: 711px;
+  min-height: 456px;
+  
 }
 
 .result__video {
- width: 100%;
- height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+ }
+
+.result__video-container {
+  position: relative;
+  width: 711px;
+  max-height: 386px;
+  margin-bottom: 16px;
 }
 
-.content__list-item:not(:last-of-type) {
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 
 }
+
+.search-form__label {
+  width: fit-content;
+  display: flex;
+}
+
+.search-form__label-text {
+}
+
+.search-form__fieldset {
+  border: none;
+  min-width: 255px;
+}
+
+.search-form__textfield {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.70);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 100%;
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+  appearance: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.search-form__submit-button {
+  width: 194px;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form:last-child {
+  display: flex;
+  align-items: end;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  display: block;
+  border: 1px solid #FFF;
+  inline-size: 19px;
+  block-size: 19px;
+  margin-right: 5px;
+}
+
+.button {
+  cursor: pointer;
+}
+
+.title {
+  color: #FFF;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
