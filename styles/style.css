@@ -45,24 +45,25 @@ ol {
   display: flex;
   align-items: end;
   gap: 30px;
+  min-height: 554px;
   margin: auto;
   max-inline-size: 1140px;
-  min-height: 554px;
 }
 
 .content__details {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  align-self: self-start;
   width: 100%;
   height: 100%;
-  align-self: self-start;
 }
 
 .content__list {
+  position: relative;
   max-height: 298px;
   overflow-y: auto;
-  position: relative;
+  padding-bottom: 5px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -77,21 +78,21 @@ ol {
 }
 
 .content__video-card-title {
+  margin-bottom: 6px;
   color: #FFF;
   font-family: Oswald;
+  font-weight: 700;
   font-size: 30px;
   font-style: normal;
-  font-weight: 700;
   line-height: 100%; /* 30px */
-  text-transform: uppercase;
-  margin-bottom: 6px;;
+  text-transform: uppercase;;
 }
 
 .content__video-card-thumbnail {
   object-fit: cover;
   object-position: center;
-  inline-size: 194px;
-  block-size: 103px;
+  inline-size: 193px;
+  block-size: 108px;
 }
 
 .content__video-card-description {
@@ -105,20 +106,20 @@ ol {
 .content__accent {
   color: #545050;
   font-family: Oswald;
+  font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  font-weight: 700;
   line-height: 94%; /* 70.5px */
   text-transform: uppercase;
 }
 
 .content__card-link {
-  text-decoration: none;
-  color: #FFF;;
-  cursor: pointer;
   display: block;
   margin: 2px;
   padding: 1px;
+  color: #FFF;
+  text-decoration: none;;
+  cursor: pointer;
 }
 
 .content__card-link:focus {
@@ -138,31 +139,27 @@ ol {
   background-color: #545050;;
 }
 
-.content__card-link_current {
-
-}
-
 .result {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   min-width: 711px;
   min-height: 456px;
+  padding-bottom: 23px;
 }
 
 .result__video {
-  inline-size: 100%;
-  block-size: 100%;
+  inset: 0;
+  max-height: 386px;
   object-fit: cover;
   object-position: center;
-  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+
  }
 
 .result__video-container {
   position: relative;
-  width: 711px;
-  max-height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .search-form {
@@ -172,8 +169,8 @@ ol {
 }
 
 .search-form__label {
-  width: fit-content;
   display: flex;
+  width: fit-content;
   cursor: pointer;
 }
 
@@ -199,46 +196,49 @@ ol {
   outline-offset: -1px;
 }
 
+.search-form__fieldset-checkbox {
+  padding-left: 7px;
+}
 
 .search-form__label-text:hover {
   text-decoration: underline;
 }
 
 .search-form__fieldset {
-  border: none;
   min-width: 255px;
+  border: none;
 }
 
 .search-form__textfield {
-  cursor: text;
-  background-color: transparent;
+  width: 100%;
+  width: 225px;
   border: none;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
   color: rgba(255, 255, 255, 0.70);
   font-family: Fira Sans Condensed;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  width: 100%;
-  border-bottom: 1px solid;
-  border-top: 1px solid;
+  background-color: transparent;
+  cursor: text;
   appearance: none;
-  width: 225px;
 }
 
 .search-form__fieldset-title {
+  margin-bottom: 5px;
   color: #FFF;
   font-family: Fira Sans Condensed;
+  font-weight: 400;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  margin-bottom: 5px;
 }
 
 .search-form__submit-button {
-  width: 194px;
   align-self: end;
+  width: 194px;
 }
 
 .search-form__checkbox-list {
@@ -248,33 +248,33 @@ ol {
 
 .search-form__pseudo-checkbox {
   display: block;
+  margin-right: 5px;
   border: 1px solid #FFF;
   inline-size: 19px;
   block-size: 19px;
-  margin-right: 5px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
   content: '';
   display: block;
+  margin: 1px auto;
   background-color: #FFF;
   inline-size: 15px;
   block-size: 15px;
-  margin: 1px auto;
 }
 
 .button {
-  cursor: pointer;
-  background-color: transparent;
+  height: 34px;
   border: 1px solid #FFF;
   color: #FFF;
+  font-family: Fira Sans Condensed;
+  font-weight: 700;
   font-size: 18px;
   font-style: normal;
-  font-weight: 700;
   line-height: normal;
-  font-family: Fira Sans Condensed;
-  height: 34px;
   text-align: center;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .button:focus {
@@ -301,19 +301,19 @@ button:hover {
 .title {
   color: #FFF;
   font-family: Oswald;
+  font-weight: 700;
   font-size: 75px;
   font-style: normal;
-  font-weight: 700;
   line-height: 94%;
   text-transform: uppercase;
 }
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 } 
