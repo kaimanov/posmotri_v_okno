@@ -47,6 +47,7 @@ ol {
   gap: 30px;
   margin: auto;
   max-inline-size: 1140px;
+  min-height: 554px;
 }
 
 .content__details {
@@ -55,6 +56,7 @@ ol {
   gap: 26px;
   width: 100%;
   height: 100%;
+  align-self: self-start;
 }
 
 .content__list {
@@ -114,6 +116,30 @@ ol {
   text-decoration: none;
   color: #FFF;;
   cursor: pointer;
+  display: block;
+  margin: 2px;
+  padding: 1px;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+}
+
+.content__card-link:focus-visible {
+  border: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.content__card-link:active {
+  background-color: #545050;;
+}
+
+.content__card-link_current {
+
 }
 
 .result {
@@ -125,9 +151,11 @@ ol {
 }
 
 .result__video {
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
+  object-position: center;
+  inset: 0;
  }
 
 .result__video-container {
@@ -149,7 +177,31 @@ ol {
   cursor: pointer;
 }
 
-.search-form__label-text {
+&::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+.search-form__label:has(:active) {
+  outline: none;
+}
+
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #FFF;
+  outline-offset: -1px;
+}
+
+
+.search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .search-form__fieldset {
@@ -172,15 +224,6 @@ ol {
   border-top: 1px solid;
   appearance: none;
   width: 225px;
-}
-
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  outline: 1px solid #FFF;
-  outline-offset: 1px;
 }
 
 .search-form__fieldset-title {
@@ -232,6 +275,23 @@ ol {
   font-family: Fira Sans Condensed;
   height: 34px;
   text-align: center;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 1px solid #FFF;
+  outline-offset: 1px;
+}
+
+button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;;
 }
 
 .more-button {
