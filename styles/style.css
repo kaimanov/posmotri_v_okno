@@ -12,7 +12,7 @@ html {
   display: flex;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -45,7 +45,6 @@ ol {
   display: flex;
   align-items: end;
   gap: 30px;
-  min-height: 554px;
   margin: auto;
   max-inline-size: 1140px;
 }
@@ -80,7 +79,7 @@ ol {
 .content__video-card-title {
   margin-bottom: 6px;
   color: #FFF;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
@@ -105,7 +104,7 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: Oswald;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -143,8 +142,6 @@ ol {
   display: flex;
   flex-direction: column;
   min-width: 711px;
-  min-height: 456px;
-  padding-bottom: 23px;
 }
 
 .result__video {
@@ -166,6 +163,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  padding-bottom: 4px;
 }
 
 .search-form__label {
@@ -196,16 +194,11 @@ ol {
   outline-offset: -1px;
 }
 
-.search-form__fieldset-checkbox {
-  padding-left: 7px;
-}
-
 .search-form__label-text:hover {
   text-decoration: underline;
 }
 
 .search-form__fieldset {
-  min-width: 255px;
   border: none;
 }
 
@@ -216,7 +209,7 @@ ol {
   border-top: 1px solid;
   border-bottom: 1px solid;
   color: rgba(255, 255, 255, 0.70);
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -229,7 +222,7 @@ ol {
 .search-form__fieldset-title {
   margin-bottom: 5px;
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 400;
   font-size: 18px;
   font-style: normal;
@@ -267,7 +260,7 @@ ol {
   height: 34px;
   border: 1px solid #FFF;
   color: #FFF;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 18px;
   font-style: normal;
@@ -286,7 +279,7 @@ ol {
   outline-offset: 1px;
 }
 
-button:hover {
+.button:hover {
   text-decoration: underline;
 }
 
