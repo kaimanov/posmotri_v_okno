@@ -61,8 +61,8 @@ ol {
 .content__list {
   position: relative;
   max-height: 298px;
-  overflow-y: auto;
   padding-bottom: 5px;
+  overflow-y: auto;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -79,7 +79,7 @@ ol {
 .content__video-card-title {
   margin-bottom: 6px;
   color: #FFF;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 30px;
   font-style: normal;
@@ -104,7 +104,7 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
@@ -119,6 +119,14 @@ ol {
   color: #FFF;
   text-decoration: none;;
   cursor: pointer;
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:visited {
+  background-color: #545050;
 }
 
 .content__card-link:focus {
@@ -172,10 +180,6 @@ ol {
   cursor: pointer;
 }
 
-&::placeholder {
-  color: rgba(255, 255, 255, 0.70);
-}
-
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #FFF;
   outline-offset: 1px;
@@ -217,6 +221,10 @@ ol {
   background-color: transparent;
   cursor: text;
   appearance: none;
+}
+
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70);
 }
 
 .search-form__fieldset-title {
@@ -293,7 +301,7 @@ ol {
 
 .title {
   color: #FFF;
-  font-family: Oswald;
+  font-family: 'Oswald', 'Arial', sans-serif;
   font-weight: 700;
   font-size: 75px;
   font-style: normal;
